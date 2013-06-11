@@ -26,6 +26,18 @@ Don't forget to migrate your database::
 
     ./manage.py migrate social_media_links
 
+If you want to use the social icons as provided by
+[monosocialfont](http://drinchev.github.io/monosocialiconsfont/) you should add
+the following stylesheet to your ``base.html``::
+
+    <head>
+        <link href="{{ STATIC_URL }}social_media_links/css/styles.css" rel="stylesheet" media="screen">
+    </head>
+    <body>
+        // Use it like so:
+        <span class="symbol">&#xe224;</span>
+    </body>
+
 
 Usage
 -----
