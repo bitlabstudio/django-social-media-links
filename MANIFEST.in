@@ -1,0 +1,9 @@
+include AUTHORS
+include LICENSE
+include DESCRIPTION
+include CHANGELOG.txt
+include README.md
+graft social_media_links
+global-exclude *.orig *.pyc *.log *.swp
+prune social_media_links/tests/coverage
+prune social_media_links/.ropeproject
