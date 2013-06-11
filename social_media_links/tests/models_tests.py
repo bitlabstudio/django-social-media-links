@@ -1,10 +1,18 @@
 """Tests for the models of the social_media_links app."""
 from django.test import TestCase
 
-# from .factories import YourModelFactory
+from . import factories
 
 
-class DummyTestCase(TestCase):
-    """Sample test case to show that `python setup.py test` works."""
-    def test_something(self):
-        self.assertTrue(True)
+class LinkTypeTestCase(TestCase):
+    """Tests for the ``LinkType`` model."""
+    def test_model(self):
+        obj = factories.LinkTypeFactory()
+        self.assertTrue(obj.pk)
+
+
+class LinkTestCase(TestCase):
+    """Tests for the ``Link`` model."""
+    def test_model(self):
+        obj = factories.LinkFactory()
+        self.assertTrue(obj.pk)

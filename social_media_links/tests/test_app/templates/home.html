@@ -1,0 +1,16 @@
+{% load social_media_links_tags %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="{{ STATIC_URL }}social_media_links/css/styles.css" rel="stylesheet" media="screen">
+</head>
+<body>
+{% get_social_media_links as social_media_links %}
+{% if social_media_links %}
+    <ul>
+        {% include "social_media_links/partials/link_list.html" with links=social_media_links %}
+    </ul>
+{% endif %}
+</body>
+</html>

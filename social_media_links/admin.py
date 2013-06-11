@@ -1,11 +1,16 @@
 """Admin classes for the social_media_links app."""
-# from django.contrib import admin
+from django.contrib import admin
 
-# from . import models
+from . import models
 
 
-# class YourModelAdmin(admin.ModelAdmin):
-#    list_display = ['some', 'fields', ]
-#    search_fields = ['some', 'fieds', ]
+class LinkTypeAdmin(admin.ModelAdmin):
+    list_display = ['name', 'symbol', ]
 
-# admin.site.register(models.YourModel, YourModelAdmin)
+
+class LinkAdmin(admin.ModelAdmin):
+    list_display = ['link_type', 'name', 'url', 'title', ]
+
+
+admin.site.register(models.LinkType, LinkTypeAdmin)
+admin.site.register(models.Link, LinkAdmin)
