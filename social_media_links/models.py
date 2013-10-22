@@ -58,5 +58,13 @@ class Link(models.Model):
         blank=True,
     )
 
+    position = models.IntegerField(
+        verbose_name=_('Position'),
+        blank=True, null=True,
+    )
+
+    class Meta:
+        ordering = ('position', )
+
     def __unicode__(self):
         return self.name

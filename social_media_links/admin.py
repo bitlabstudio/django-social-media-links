@@ -9,7 +9,7 @@ class LinkTypeAdmin(admin.ModelAdmin):
 
 
 class LinkAdmin(admin.ModelAdmin):
-    list_display = ['link_type', 'name', 'url', 'title', ]
+    list_display = ['link_type', 'name', 'url', 'title', 'position', ]
 
 
 admin.site.register(models.LinkType, LinkTypeAdmin)
