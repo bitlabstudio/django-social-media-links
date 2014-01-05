@@ -1,3 +1,10 @@
 {% for link in links %}
-    <li><span class="symbol">{{ link.link_type.symbol|safe }}</span> <a href="{{ link.url }}" title="{{ link.title }}">{{ link.name }}</a></li>
+    <li>
+        {% if link.link_type.symbol %}
+            <span class="symbol">{{ link.link_type.symbol|safe }}</span> 
+        {% else %}
+            <img src="{{ link.link_type.image.url }}" style="margin-right:5px;margin-top:2px;" />
+        {% endif %}
+        &nbsp;<a href="{{ link.url }}" title="{{ link.title }}">{{ link.name }}</a>
+    </li>
 {% endfor %}

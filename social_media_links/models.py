@@ -10,6 +10,7 @@ class LinkType(models.Model):
     :name: The name of this link type, i.e. 'Facebook'
     :symbol: The code for the symbol of this link type. See
       http://drinchev.github.io/monosocialiconsfont/ for available codes.
+    :image: If you don't want to use the font, you can upload an image.
 
     """
     name = models.CharField(
@@ -21,6 +22,12 @@ class LinkType(models.Model):
         max_length=256,
         verbose_name=_('Symbol'),
         blank=True,
+    )
+
+    image = models.ImageField(
+        upload_to='social_media_links',
+        verbose_name=_('Image'),
+        null=True, blank=True,
     )
 
     def __unicode__(self):
