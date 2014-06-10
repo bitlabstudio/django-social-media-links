@@ -31,7 +31,7 @@ If you want to use the social icons as provided by
 the following stylesheet to your ``base.html``::
 
     <head>
-        <link href="{{ STATIC_URL }}social_media_links/css/styles.css" rel="stylesheet" media="screen">
+        <link href="{% static "social_media_links/css/styles.css" %}" rel="stylesheet" media="screen">
     </head>
     <body>
         // Use it like so:

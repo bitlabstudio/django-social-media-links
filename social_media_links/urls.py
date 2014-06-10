@@ -1,5 +1,5 @@
 """URLs for the social_media_links app."""
-# from django.conf.urls.defaults import patterns, url
+# from django.conf.urls import patterns, url
 
 # from . import views
 

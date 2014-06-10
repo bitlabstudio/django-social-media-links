@@ -53,5 +53,6 @@ setup(
     install_requires=[
         'django',
         'django_libs',
+        'Pillow',
     ],
 )
