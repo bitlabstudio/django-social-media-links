@@ -4,7 +4,7 @@ import factory
 from .. import models
 
 
-class LinkTypeFactory(factory.Factory):
+class LinkTypeFactory(factory.DjangoModelFactory):
     """Factory for the ``LinkCategory`` model."""
     FACTORY_FOR = models.LinkType
 
@@ -12,7 +12,7 @@ class LinkTypeFactory(factory.Factory):
     symbol = '&#xe224;'
 
 
-class LinkFactory(factory.Factory):
+class LinkFactory(factory.DjangoModelFactory):
     FACTORY_FOR = models.Link
 
     link_type = factory.SubFactory(LinkTypeFactory)
