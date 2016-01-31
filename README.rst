@@ -15,6 +15,10 @@ To get the latest commit from GitHub::
 
     $ pip install -e git+git://github.com/bitmazk/django-social-media-links.git#egg=social_media_links
 
+Note: Please refer to the below link when facing dependency issues related to ``Pillow`` on Linux distributions::
+
+    https://pillow.readthedocs.org/en/3.0.0/installation.html#linux-installation
+
 Add ``social_media_links`` to your ``INSTALLED_APPS``::
 
     INSTALLED_APPS = (
@@ -79,7 +83,7 @@ If you want to contribute to this project, please perform the following steps::
     # Clone your fork
     $ mkvirtualenv -p python2.7 django-social-media-links
     $ python setup.py install
-    $ pip install -r dev_requirements.txt
+    $ pip install -r test_requirements.txt
 
     $ git co -b feature_branch master
     # Implement your feature and tests
